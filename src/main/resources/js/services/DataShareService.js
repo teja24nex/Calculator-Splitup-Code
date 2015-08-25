@@ -1,6 +1,4 @@
 Calculator.service('DataShareService', function($rootScope) {
-	
-
 	return {
 		//This is a shared public function which maintains the Generic Data for Sharing across different controllers.
 		//This code is referenced from the library blog. http://blog.stevenlevithan.com/archives/javascript-roman-numeral-converter
@@ -16,9 +14,7 @@ Calculator.service('DataShareService', function($rootScope) {
 			while (i--)
 				roman = (key[+digits.pop() + (i * 10)] || "") + roman;
 			return Array(+digits.join("") + 1).join("M") + roman;			
-		},
-		
-		
+		},		
 		convertToDecimal : function(str) {
     		var	str = str.toUpperCase(),
     			validator = /^M*(?:D?C{0,3}|C[MD])(?:L?X{0,3}|X[CL])(?:V?I{0,3}|I[XV])$/,
@@ -31,9 +27,5 @@ Calculator.service('DataShareService', function($rootScope) {
     			num += key[m[0]];
     		return num;
     	}
-	
-	
-	
-	
 	};
 }); 
