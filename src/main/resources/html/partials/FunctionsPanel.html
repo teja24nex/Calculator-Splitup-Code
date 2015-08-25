@@ -1,0 +1,31 @@
+<!--Placeholder for the the clear and Equals(Result) buttons -->
+<div class="clear-digits-panel">
+	<div class="button-holder-clear">
+		<button class="digits-button" ng-click="clearResult()">{{i18n.CLEAR}}</button>
+	</div>
+	<div class="button-holder-clear"> 
+		<button class="digits-button" ng-click="showResult()">{{i18n.EQUALS}}</button>
+	</div>
+</div>
+
+<div class="main-functions-panel">
+	<!--Placeholder for the Add/Subtract buttons -->
+	<div class="top-functions-panel">
+		<div class="button-holder-functions">
+			<button class="digits-button" ng-click="readOperator('+')">{{i18n.ADD}}</button>
+		</div>
+		
+		<div class="button-holder-functions">
+			<button class="digits-button" ng-click="readOperator('square')"><span class="label-class">{{i18n.SQUARE}}</span></button>
+		</div>
+	</div>
+	<!--Placeholder for the Multiply and Power of N buttons -->
+	<div class="lower-functions-panel">
+		<div class="button-holder-functions">
+			<button class="digits-button" ng-click="readOperator('*')">{{i18n.MULTIPLY}}</button>
+		</div>						
+		<div class="button-holder-functions">
+			<button class="digits-button" ng-click="readOperator('^')"> {{i18n.POWER_OF_N}}</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+<div ng-controller="MainController">	
+	<div class="calculator-main-panel">
+		<!--Result Display Section -->
+		<input type="text" disabled="true" ng-model = "result_display_value" class="result-width"></input>		
+		<!--This HTML has 2 panels. 1 for Digits interaction. 2 for Functions. If required, Custom Directives can also be used instead of ng-templates for further interaction if any. -->
+		<div class="calculator-interactive-panel"> 
+			<div class="calculator-digits-panel" ng-include src="'html/partials/DigitsPanel.html'">	</div>				
+			<div class="calculator-functions-panel" ng-include src="'html/partials/FunctionsPanel.html'"></div>			
+		</div>		
+	</div>	
+</div>

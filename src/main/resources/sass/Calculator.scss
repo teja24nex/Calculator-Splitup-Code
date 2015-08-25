@@ -1,0 +1,140 @@
+@mixin panel{
+  width:90%;
+  margin-left:5%;
+  margin-bottom:5px;
+  margin-top:5px;
+}
+
+@mixin inner-panel{
+  width:50%;
+  height:100%;
+  float:left;
+}
+
+@mixin button-holder{
+  height:100%;
+  float:left;
+}
+
+@mixin box-shadow{
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+@mixin basic-panel-style{
+  width:100%;
+  float:left;
+}
+
+
+.calculator-main-panel {
+  width: 25%;
+  height: 100%;
+  float: left;
+  border: 1px solid #a1a1a1;
+  margin:30px;
+  @include box-shadow;
+  background: rgba(126,175,221,1);
+  background: -moz-linear-gradient(left, rgba(126,175,221,1) 0%, rgba(5,7,11,1) 0%, rgba(5,7,11,0.66) 44%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(126,175,221,1)), color-stop(0%, rgba(5,7,11,1)), color-stop(44%, rgba(5,7,11,0.66)));
+  background: -webkit-linear-gradient(left, rgba(126,175,221,1) 0%, rgba(5,7,11,1) 0%, rgba(5,7,11,0.66) 44%);
+  background: -o-linear-gradient(left, rgba(126,175,221,1) 0%, rgba(5,7,11,1) 0%, rgba(5,7,11,0.66) 44%);
+  background: -ms-linear-gradient(left, rgba(126,175,221,1) 0%, rgba(5,7,11,1) 0%, rgba(5,7,11,0.66) 44%);
+  background: linear-gradient(to right, rgba(126,175,221,1) 0%, rgba(5,7,11,1) 0%, rgba(5,7,11,0.66) 44%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7eafdd', endColorstr='#05070b', GradientType=1 );
+}
+
+.result-width{
+  @include panel;
+  height:40px;
+  background-color:#fff;
+  @include box-shadow;  
+}
+
+.calculator-interactive-panel{
+  @include panel;
+  height:125px;  
+  border: 1px solid #a1a1a1;
+  float:left; 
+}
+
+.calculator-digits-panel{
+  @include inner-panel;
+}
+.calculator-functions-panel{
+  @include inner-panel;
+}
+
+.smaller-digits{
+  @include basic-panel-style;
+  height:50%;  
+  }
+
+.higher-digits{
+  height:50%;
+  @include basic-panel-style;
+}
+
+.button-holder-digits{
+  @include button-holder;  
+  width:33%;
+  padding:3px;
+  
+}
+.digits-button{
+  height:100%;
+  width:100%;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+  background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+  background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+  background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+  background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+  background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+  background-color:#ededed;
+}
+
+
+.clear-digits-panel{
+  height:30%;
+  @include basic-panel-style;
+}
+.main-functions-panel{
+  height:70%;
+  @include basic-panel-style;
+}
+
+
+.button-holder-functions{
+   @include button-holder;
+   padding-left:3px;
+   padding-bottom:3px;
+   width:50%; 
+}
+
+.button-holder-clear{
+   @include button-holder;
+   padding-left:3px;
+   padding-bottom:3px;
+   width:50%; 
+}
+
+.top-functions-panel{
+  height:50%;
+  @include basic-panel-style;
+}
+
+.lower-functions-panel{
+  height:50%;
+  @include basic-panel-style;
+}
+
+.label-class{
+  text-overflow:ellipsis;
+  width:5px;
+}
+
+
+
+
+
